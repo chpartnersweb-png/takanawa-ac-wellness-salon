@@ -1,0 +1,13 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-transparent-v1.png';
+import { salon, navigation } from '../data/salon';
+import Icon from './Icon.astro';
+---
+<footer class="site-footer">
+  <div class="section-container">
+    <div class="footer-top"><a class="footer-brand" href="#top" aria-label={`${salon.name} トップへ`}><Image src={logo} alt="高輪鍼灸 AC Wellness Salon" width={320} format="png" /><span>心と身体を整え、<br />あなた史上最高の自分へ。</span></a><div class="footer-links"><nav aria-label="フッターナビゲーション">{navigation.map((item) => <a href={item.href}>{item.label}</a>)}</nav><nav class="social-links" aria-label="公式SNS・掲載情報"><a href={salon.links.instagram} target="_blank" rel="noopener noreferrer"><Icon name="instagram" /><span>Instagram</span><Icon /></a><a href={salon.links.line} target="_blank" rel="noopener noreferrer"><Icon name="chat" /><span>LINE公式</span><Icon /></a><a href={salon.links.google} target="_blank" rel="noopener noreferrer"><Icon name="pin" /><span>Google掲載ページ</span><Icon /></a></nav></div></div>
+    <p class="footer-wordmark" aria-hidden="true">AC Wellness</p>
+    <div class="footer-bottom"><small>© {new Date().getFullYear()} {salon.englishName}</small><a href="#top">ページの先頭へ <Icon name="down" /></a></div>
+  </div>
+</footer>

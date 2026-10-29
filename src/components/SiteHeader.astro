@@ -1,0 +1,26 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/logo-transparent-v1.png';
+import { salon, navigation } from '../data/salon';
+import Icon from './Icon.astro';
+---
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <nav class="desktop-nav" aria-label="メインナビゲーション">
+      <a href="#philosophy">私たちの想い</a>
+      <a href="#access">アクセス</a>
+    </nav>
+    <a class="brand" href="#top" aria-label={`${salon.name} トップへ`}>
+      <Image src={logo} alt="" width={192} format="png" class="brand__image" loading="eager" />
+      <span class="brand__name"><span>{salon.shortName}</span><span lang="en">{salon.englishName}</span></span>
+    </a>
+    <a class="header-booking" href={salon.links.booking} target="_blank" rel="noopener noreferrer"><span>詳細・ご予約<small lang="en">HOT PEPPER Beauty</small></span><Icon /><span class="sr-only">（新しいタブで開きます）</span></a>
+    <details class="mobile-menu" data-mobile-menu>
+      <summary aria-label="メニューを開く" aria-expanded="false"><span class="menu-lines" aria-hidden="true"><span></span><span></span></span><span class="menu-label" lang="en">MENU</span></summary>
+      <nav aria-label="モバイルナビゲーション" class="mobile-menu__panel">
+        {navigation.map((item, i) => <a href={item.href}><small>0{i + 1}</small><span>{item.label}<span lang="en">{item.en}</span></span><Icon name="arrow" /></a>)}
+        <a class="mobile-menu__reservation" href={salon.links.booking} target="_blank" rel="noopener noreferrer"><span>詳細・ご予約<span>HOT PEPPER Beauty</span></span><Icon /></a>
+      </nav>
+    </details>
+  </div>
+</header>

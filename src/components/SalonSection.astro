@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import room from '../assets/line_oa_chat_261028_111814.jpg';
+import building from '../assets/line_oa_chat_261028_112012.jpg';
+import faceCare from '../assets/line_oa_chat_261028_112001.jpg';
+import careMoment from '../assets/line_oa_chat_261028_112009.jpg';
+import { salon } from '../data/salon';
+---
+<section class="salon-section section-space" id="salon" aria-labelledby="salon-title">
+  <div class="section-index" data-reveal><span>03</span><span lang="en">OUR SALON</span></div>
+  <div class="section-container">
+    <div class="salon-section__heading"><p class="eyebrow" data-reveal>高輪鍼灸 AC Wellness Salon</p><h2 id="salon-title" class="section-title" data-reveal>高輪で、自分に<br class="mobile-break" />向き合うひととき。</h2></div>
+    <div class="salon-composition">
+      <figure class="salon-composition__room"><div class="image-reveal" data-image-reveal><Image src={room} alt="鏡と施術ベッドのある高輪鍼灸の施術室" width={880} widths={[440, 660, 880]} sizes="(max-width: 767px) 79vw, 47vw" quality={87} /></div><figcaption><span>01 / 施術室</span><span lang="en">TREATMENT ROOM</span></figcaption></figure>
+      <div class="salon-composition__note" data-reveal><span class="salon-composition__vertical" aria-hidden="true">心ほどける、ひととき。</span><p>慌ただしい日常から、<br />少しだけ離れて。<br />自分のための時間を、<br />ここ高輪で。</p><div class="salon-composition__facts"><span><b>{salon.seats}</b>席のサロン</span><span>高輪台駅から徒歩<b>3</b>分</span></div></div>
+      <figure class="salon-composition__building"><div class="image-reveal" data-image-reveal><Image src={building} alt="BRIDARIUM MUE高輪本店の建物外観" width={1000} widths={[500, 750, 1000]} sizes="(max-width: 767px) 87vw, 48vw" quality={88} /></div><figcaption><span>02 / 建物外観</span><span lang="en">BRIDARIUM MUE</span></figcaption></figure>
+      <p class="salon-composition__address" data-reveal>{salon.building}<br /><span>（{salon.buildingKana}）</span><br />{salon.floor}でお待ちしています。</p>
+    </div>
+    <div class="salon-moments">
+      <div class="salon-moments__intro" data-reveal><p class="eyebrow" lang="en">CARE MOMENTS</p><h3>ケアのひとこま。</h3><p>その日の自分に、向き合う時間。</p></div>
+      <div class="salon-moments__photos">
+        <figure class="salon-moments__photo"><div class="image-reveal" data-image-reveal><Image src={faceCare} alt="顔まわりへの鍼の施術風景" width={900} widths={[450, 675, 900]} sizes="(max-width: 767px) 88vw, 49vw" quality={86} /></div><figcaption>01 / 顔まわりのケア</figcaption></figure>
+        <figure class="salon-moments__photo"><div class="image-reveal" data-image-reveal><Image src={careMoment} alt="機器を用いた顔まわりのケアの様子" width={640} widths={[320, 480, 640]} sizes="(max-width: 767px) 69vw, 34vw" quality={86} /></div><figcaption>02 / 施術のひとこま</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>

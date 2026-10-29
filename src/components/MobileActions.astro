@@ -1,0 +1,8 @@
+---
+import { salon } from '../data/salon';
+import Icon from './Icon.astro';
+---
+<nav class="mobile-actions" aria-label="ご予約・LINE公式">
+  <a class="mobile-actions__booking" href={salon.links.booking} target="_blank" rel="noopener noreferrer"><span>詳しくはこちらへ<small>HOT PEPPER Beautyでご予約</small></span><Icon /><span class="sr-only">（新しいタブで開きます）</span></a>
+  <a class="mobile-actions__line" href={salon.links.line} target="_blank" rel="noopener noreferrer"><Icon name="chat" /><span>LINE公式</span><span class="sr-only">（新しいタブで開きます）</span></a>
+</nav>

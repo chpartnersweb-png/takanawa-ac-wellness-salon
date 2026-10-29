@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+import partnerLogo from '../assets/brand/logo02-transparent-v1.png';
+---
+<section class="partnership section-space" id="partnership" aria-labelledby="partner-title">
+  <div class="partnership__year" aria-hidden="true">2027</div>
+  <div class="partnership__arc" aria-hidden="true"></div>
+  <div class="section-index" data-reveal><span>01</span><span lang="en">OUR PARTNERSHIP</span></div>
+  <div class="partnership__center">
+    <p class="eyebrow" data-reveal>ミセス・インターナショナル 2027</p>
+    <div class="partnership__logo" data-reveal><Image src={partnerLogo} alt="Mrs. International / MRS. FABULOUS OFFICIAL PARTNER 高輪鍼灸 AC Wellness Salon" width={840} widths={[420, 630, 840]} sizes="(max-width: 767px) 86vw, 420px" format="png" /></div>
+    <div class="section-rule" data-line aria-hidden="true"></div>
+    <h2 id="partner-title" class="section-title" data-reveal>挑戦する女性と、<br />共に輝く未来へ。</h2>
+    <div class="partnership__message" data-reveal>
+      <p>高輪鍼灸 AC Wellnessは、<br />「ミセス・インターナショナル 2027」<br class="mobile-break" />公式パートナーに就任。</p>
+      <p>社会貢献に挑む女性たちを支え、<br class="mobile-break" />共に輝く未来を創ります。<br />心と身体を整え、<br class="mobile-break" />あなた史上最高の自分へ―。</p>
+    </div>
+    <p class="partnership__support" data-reveal>出場者の<span>健康・美容・姿勢</span>を<br class="mobile-break" />サポートするサロンです。</p>
+  </div>
+</section>

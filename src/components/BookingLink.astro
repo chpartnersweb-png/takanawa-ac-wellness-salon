@@ -1,0 +1,14 @@
+---
+import { salon } from '../data/salon';
+import Icon from './Icon.astro';
+interface Props {
+  variant?: 'default' | 'light' | 'compact';
+  class?: string;
+}
+const { variant = 'default', class: className = '' } = Astro.props;
+---
+<a href={salon.links.booking} class:list={['booking-link', `booking-link--${variant}`, className]} target="_blank" rel="noopener noreferrer">
+  <span class="booking-link__copy"><span class="booking-link__label">詳しくはこちらへ</span><span class="booking-link__sub">HOT PEPPER Beautyで詳細・ご予約</span></span>
+  <span class="booking-link__arrow"><Icon /></span>
+  <span class="sr-only">（外部サイト・新しいタブで開きます）</span>
+</a>

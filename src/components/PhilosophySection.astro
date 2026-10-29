@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import treatment from '../assets/line_oa_chat_261028_111912.jpg';
+import BookingLink from './BookingLink.astro';
+import CareStories from './CareStories.astro';
+---
+<section class="philosophy section-space" id="philosophy" aria-labelledby="philosophy-title">
+  <div class="section-index section-index--light" data-reveal><span>02</span><span lang="en">OUR PHILOSOPHY</span></div>
+  <div class="section-container">
+    <div class="philosophy__intro">
+      <h2 id="philosophy-title" class="section-title" data-reveal>美しさを支える、<br />健やかな土台。</h2>
+      <div class="philosophy__lead" data-reveal><p>自分の身体に、耳を澄ませる。<br />日々のコンディションも、自分らしい美しさも、<br class="desktop-break" />すっと伸びた立ち姿も。</p><p>健康・美容・姿勢を大切に、<br />心と身体に向き合う時間をお届けします。</p></div>
+    </div>
+    <div class="care-stage" data-care-stage>
+      <div class="care-words">
+        <div class="care-word" data-care-word><span lang="en">HEALTH</span><span>健康</span></div>
+        <div class="care-word" data-care-word><span lang="en">BEAUTY</span><span>美容</span></div>
+        <div class="care-word" data-care-word><span lang="en">POSTURE</span><span>姿勢</span></div>
+      </div>
+      <figure class="philosophy__photo" data-care-photo><Image src={treatment} alt="肩から背中を手で丁寧にケアする施術イメージ" width={1120} widths={[480, 768, 1120]} sizes="(max-width: 767px) 88vw, 75vw" quality={85} /><figcaption lang="en">A MOMENT TO RECONNECT WITH YOURSELF.</figcaption></figure>
+    </div>
+    <CareStories />
+    <div class="philosophy__closing" data-reveal><p>自分をいたわることから、<br />新しい一歩を。</p><BookingLink variant="light" /></div>
+  </div>
+</section>

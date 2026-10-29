@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import healthMain from '../assets/line_oa_chat_261028_111903.jpg';
+import healthDetail from '../assets/line_oa_chat_261028_111908.jpg';
+import beautyMain from '../assets/line_oa_chat_261028_111901.jpg';
+import beautyDetail from '../assets/line_oa_chat_261028_111911.jpg';
+import postureMain from '../assets/line_oa_chat_261028_111907.jpg';
+import postureDetail from '../assets/line_oa_chat_261028_111910.jpg';
+---
+<div class="care-stories">
+  <article class="care-story care-story--health" aria-labelledby="care-health-title">
+    <div class="care-story__text" data-reveal>
+      <p class="eyebrow" lang="en"><span>01</span> HEALTH</p>
+      <h3 id="care-health-title">日々を支える身体に、<br />いたわりを。</h3>
+      <p>忙しい毎日のなかで、<br />後回しにしがちな自分のこと。<br />身体に目を向ける時間を、<br />暮らしのなかに。</p>
+    </div>
+    <figure class="care-story__main"><div class="image-reveal" data-image-reveal><Image src={healthMain} alt="背中に鍼を施すケアのイメージ" width={920} widths={[460, 690, 920]} sizes="(max-width: 767px) 88vw, 54vw" quality={86} /></div><figcaption>身体に向き合う、丁寧な時間。</figcaption></figure>
+    <figure class="care-story__detail"><div class="image-reveal" data-image-reveal><Image src={healthDetail} alt="首もとから肩にかけて手でケアするイメージ" width={560} widths={[280, 420, 560]} sizes="(max-width: 767px) 57vw, 29vw" quality={85} /></div></figure>
+  </article>
+  <article class="care-story care-story--beauty" aria-labelledby="care-beauty-title">
+    <div class="care-story__text" data-reveal>
+      <p class="eyebrow" lang="en"><span>02</span> BEAUTY</p>
+      <h3 id="care-beauty-title">自分らしい美しさを、<br />大切に育む。</h3>
+      <p>鏡に映る自分も、<br />その内側にある気持ちも。<br />自分を大切にするひとときを、<br />これからの毎日へ。</p>
+    </div>
+    <figure class="care-story__main"><div class="image-reveal" data-image-reveal><Image src={beautyMain} alt="顔まわりに鍼を施す美容ケアのイメージ" width={920} widths={[460, 690, 920]} sizes="(max-width: 767px) 88vw, 54vw" quality={86} /></div><figcaption>自分らしさを見つめる、ひととき。</figcaption></figure>
+    <figure class="care-story__detail"><div class="image-reveal" data-image-reveal><Image src={beautyDetail} alt="自然な首もとと肩のラインを表した美容イメージ" width={560} widths={[280, 420, 560]} sizes="(max-width: 767px) 57vw, 29vw" quality={85} /></div></figure>
+  </article>
+  <article class="care-story care-story--posture" aria-labelledby="care-posture-title">
+    <div class="care-story__text" data-reveal>
+      <p class="eyebrow" lang="en"><span>03</span> POSTURE</p>
+      <h3 id="care-posture-title">立ち姿にも、<br />あなたらしさを。</h3>
+      <p>日常の一歩も、<br />大切な舞台に立つ日も。<br />健康と美しさにつながる姿勢を、<br />一緒に大切にしていきます。</p>
+    </div>
+    <figure class="care-story__main"><div class="image-reveal" data-image-reveal><Image src={postureMain} alt="髪をまとめた女性の肩から背中にかけての立ち姿" width={800} widths={[400, 600, 800]} sizes="(max-width: 767px) 75vw, 42vw" quality={86} /></div><figcaption>日常から、大切な一日まで。</figcaption></figure>
+    <figure class="care-story__detail"><div class="image-reveal" data-image-reveal><Image src={postureDetail} alt="肩から背中にかけて手で丁寧にケアするイメージ" width={640} widths={[320, 480, 640]} sizes="(max-width: 767px) 62vw, 35vw" quality={85} /></div></figure>
+  </article>
+</div>

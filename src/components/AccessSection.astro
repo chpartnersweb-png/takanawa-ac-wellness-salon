@@ -1,0 +1,21 @@
+---
+import { salon, transport } from '../data/salon';
+import Icon from './Icon.astro';
+---
+<section class="access section-space" id="access" aria-labelledby="access-title">
+  <div class="section-index" data-reveal><span>04</span><span lang="en">ACCESS &amp; INFORMATION</span></div>
+  <div class="section-container">
+    <div class="access__heading" data-reveal><h2 id="access-title" class="section-title">お越しになる方へ。</h2><p>高輪台駅 A2出口より徒歩3分</p></div>
+    <div class="access__layout">
+      <div class="access__salon" data-reveal>
+        <p class="access__name">{salon.shortName}<span lang="en">{salon.englishName}</span></p>
+        <address>〒{salon.postalCode}<br />{salon.address}<br />{salon.building}<br /><span class="access__kana">（{salon.buildingKana}）</span><br /><strong>{salon.floor}</strong></address>
+        <dl class="salon-information"><div><dt>営業時間</dt><dd><span>{salon.hours}</span><small>{salon.hoursNote}</small></dd></div><div><dt>定休日</dt><dd>{salon.closed}</dd></div><div><dt>席数</dt><dd>{salon.seats}席</dd></div><div><dt>電話</dt><dd><a href={salon.phoneHref}>{salon.phone}<Icon name="phone" /></a></dd></div></dl>
+        <a class="map-link" href={salon.links.maps} target="_blank" rel="noopener noreferrer"><Icon name="pin" /><span>Google Mapsで場所を見る<small>東京都港区高輪3-7-6</small></span><Icon /><span class="sr-only">（新しいタブで開きます）</span></a>
+      </div>
+      <div class="transport-list">
+        {transport.map((group, i) => <div class="transport-group" data-reveal><div class="transport-group__heading"><span class="transport-group__number">0{i + 1}</span><h3>{group.title}<small lang="en">{group.en}</small></h3></div><ul>{group.items.map((item) => <li><span>{item.name}</span><span>{item.time}</span></li>)}</ul></div>)}
+      </div>
+    </div>
+  </div>
+</section>

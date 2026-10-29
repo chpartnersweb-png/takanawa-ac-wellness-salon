@@ -1,0 +1,15 @@
+---
+import BookingLink from './BookingLink.astro';
+import Icon from './Icon.astro';
+import { salon } from '../data/salon';
+---
+<section class="reservation section-space" id="reservation" aria-labelledby="reservation-title">
+  <div class="reservation__arc" aria-hidden="true"></div>
+  <div class="reservation__inner">
+    <p class="eyebrow" lang="en" data-reveal>YOUR NEXT CHAPTER</p>
+    <h2 id="reservation-title" class="section-title" data-reveal>次の私に、<br />会いにいく。</h2>
+    <p class="reservation__intro" data-reveal>サロンの詳細・ご予約は、<br class="mobile-break" />ホットペッパービューティーへ。</p>
+    <div data-reveal><BookingLink variant="light" /></div>
+    <div class="reservation__secondary" data-reveal><a href={salon.links.line} target="_blank" rel="noopener noreferrer"><Icon name="chat" /><span>LINE公式</span><Icon /></a><a href={salon.phoneHref}><Icon name="phone" /><span>{salon.phone}</span></a></div>
+  </div>
+</section>
