@@ -1,25 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import releasePhoto from '../assets/line_oa_chat_261028_111818.jpg';
-import { salon } from '../data/salon';
-import BookingLink from './BookingLink.astro';
+import postureDetail from '../assets/line_oa_chat_261028_111910.jpg';
 ---
-<section class="release-section section-space" id="release" aria-labelledby="release-title">
-  <div class="section-index" data-reveal><span>02</span><span lang="en">SCAPULA RELEASE</span></div>
-  <div class="section-container">
-    <div class="release-heading" data-reveal>
-      <p class="eyebrow">肩甲骨はがし・肩甲骨リリース</p>
-      <h2 id="release-title" class="section-title">肩甲骨から、<br />しなやかな私へ。</h2>
-    </div>
-    <figure class="release-photo"><div class="image-reveal" data-image-reveal><Image src={releasePhoto} alt="肩甲骨のまわりに手を添えてケアする施術イメージ" width={1000} widths={[480, 768, 1000]} sizes="(max-width: 767px) 89vw, 80vw" quality={88} /></div><figcaption>肩・背中まわりに、丁寧に向き合うケア。</figcaption></figure>
-    <div class="release-description">
-      <p class="release-description__lead" data-reveal>肩や首のこわばりも、<br />気になる立ち姿も。<br />肩甲骨まわりから見つめます。</p>
-      <div class="release-description__body" data-reveal>
-        <p>肩甲骨はがし・肩甲骨リリースは、肩甲骨まわりに着目し、肩や背中のこわばり、巻き肩・猫背などの姿勢のお悩みに向き合うケアです。</p>
-        <p>高輪鍼灸 AC Wellness Salonでは、整体・鍼灸・美容・機器を用いたケアを組み合わせ、一人ひとりの体質やお悩みに合わせたオーダーメイドの施術をご提案します。</p>
-        <p>カウンセリングでお話を伺い、身体のことも、美容のことも、一緒に考える時間を大切にしています。</p>
-      </div>
-    </div>
-    <div class="release-footer" data-reveal><ul class="salon-features" aria-label="サロンの特徴">{salon.features.map((feature) => <li>{feature}</li>)}</ul><BookingLink /></div>
+<article class="care-story care-story--posture" id="release" aria-labelledby="release-title">
+  <div class="care-story__text" data-reveal>
+    <p class="eyebrow" lang="en"><span>04</span> BODY &amp; POSTURE</p>
+    <h3 id="release-title">整体と姿勢のケアを、<br />あなたに合わせて。</h3>
+    <p>巻き肩や猫背、肩や背中のこわばりなど。<br />気になる姿勢や身体の状態を伺い、<br />整体や肩甲骨まわりのケアをご提案します。<br />肩甲骨はがし・肩甲骨リリースも、<br />お悩みに応じたケアの一つです。</p>
   </div>
-</section>
+  <figure class="care-story__main"><div class="image-reveal" data-image-reveal><Image src={releasePhoto} alt="肩甲骨のまわりに手を添えてケアする施術イメージ" width={1000} widths={[480, 768, 1000]} sizes="(max-width: 767px) 88vw, 54vw" quality={88} /></div><figcaption>身体の状態に合わせた、ボディ・姿勢ケア。</figcaption></figure>
+  <figure class="care-story__detail"><div class="image-reveal" data-image-reveal><Image src={postureDetail} alt="肩から背中を手で丁寧にケアするイメージ" width={640} widths={[320, 480, 640]} sizes="(max-width: 767px) 62vw, 29vw" quality={85} /></div></figure>
+</article>

@@ -45,12 +45,12 @@ Create a matching portrait 9:16 mobile website hero photograph based on this ref
 | `src/assets/line_oa_chat_261028_111903.jpg` | 健康の紹介・背中への鍼のイメージ |
 | `src/assets/line_oa_chat_261028_111908.jpg` | 健康の紹介・首と肩のケアのイメージ |
 | `src/assets/line_oa_chat_261028_111901.jpg` | 美容の紹介・顔まわりへの鍼のイメージ |
-| `src/assets/line_oa_chat_261028_111911.jpg` | 美容の紹介・首もとと肩のライン |
-| `src/assets/line_oa_chat_261028_111907.jpg` | 姿勢の紹介・肩から背中にかけての立ち姿 |
+| `src/assets/line_oa_chat_261028_111911.jpg` | フェイシャルとブライダルの紹介・首もとと肩のライン |
+| `src/assets/line_oa_chat_261028_111907.jpg` | ブライダルの紹介・肩から背中にかけての立ち姿 |
 | `src/assets/line_oa_chat_261028_111910.jpg` | 姿勢の紹介・肩から背中のケアのイメージ |
-| `src/assets/line_oa_chat_261028_112001.jpg` | ケアのひとこま・顔まわりの施術写真 |
-| `src/assets/line_oa_chat_261028_112009.jpg` | ケアのひとこま・機器を用いた施術写真 |
-| `src/assets/line_oa_chat_261028_111818.jpg` | 肩甲骨はがし・肩甲骨リリースの説明に添える施術イメージ |
+| `src/assets/line_oa_chat_261028_112001.jpg` | 美容鍼の紹介・顔まわりの施術写真 |
+| `src/assets/line_oa_chat_261028_112009.jpg` | フェイシャルの紹介・機器を用いた施術写真 |
+| `src/assets/line_oa_chat_261028_111818.jpg` | 整体・姿勢ケアの一つとして紹介する肩甲骨まわりの施術イメージ |
 | `src/assets/line_oa_chat_261028_111920.jpg` | 横から撮影したBefore／Afterの比較。全体を保持 |
 | `src/assets/line_oa_chat_261028_111921.jpg` | 背中から撮影したBefore／Afterの比較。全体を保持 |
 | `src/assets/line_oa_chat_261028_111935.jpg` | 橋場亜矢さんの紹介記事。2021年4月号と明記 |

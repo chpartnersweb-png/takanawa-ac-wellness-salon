@@ -4,20 +4,24 @@
 
 ## 修正方針
 
-`src/assets/参考/`の8点と、提供の比較写真・人物写真・院内写真をもとに、サロンの具体的な内容を補いました。「メニューと料金を一覧表示しない」というご希望を維持し、肩甲骨リリースや施術方針を文章で説明しています。詳細・予約は指定のホットペッパービューティーへ接続します。
+`src/assets/参考/`の8点と、提供の比較写真・人物写真・院内写真をもとに、サロンの具体的な内容を補いました。鍼灸・美容鍼・フェイシャル・ボディケア・姿勢・ブライダルを、サロン全体のケアとして紹介しています。「メニューと料金を一覧表示しない」というご希望は維持し、詳細・予約は指定のホットペッパービューティーへ接続します。
+
+お客様より「肩甲骨リリースが特にメインというわけではない」とご指摘をいただき、肩甲骨リリースの独立した大型セクションを、整体・姿勢ケアの紹介へ統合しました。ヘッダー・ページ順・SEOの説明も、サロン全体を表す内容に変更しました。
 
 ## 文章と根拠
 
 | 内容 | 主な参照資料 | 反映先 |
 | --- | --- | --- |
-| 肩甲骨はがし・肩甲骨リリース、巻き肩・猫背などの悩み | `参考/line_oa_chat_261028_111816.jpg`、`参考/line_oa_chat_261028_111820.jpg` | ReleaseSection、CareStories、SEOの説明 |
-| 鍼灸・美容・整体・機器を組み合わせるオーダーメイドケア | `参考/line_oa_chat_261028_111820.jpg`、`参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | ReleaseSection、PhilosophySection、CareStories |
-| 一人ひとりの体質や悩みに合わせる、カウンセリングを重視する | `参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | ReleaseSection、PhilosophySection、PractitionerSection |
-| 完全予約制、女性専用 | `参考/line_oa_chat_261028_111816.jpg` | salon.features、ReleaseSection、SalonSection、SEOの説明 |
-| 完全個室 | `参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | salon.features、ReleaseSection、SalonSection |
+| ケアの一つとしての肩甲骨はがし・肩甲骨リリース、巻き肩・猫背などの悩み | `参考/line_oa_chat_261028_111816.jpg`、`参考/line_oa_chat_261028_111820.jpg` | CareStories内のReleaseSection |
+| 鍼灸・美容・整体・機器を組み合わせるオーダーメイドケア | `参考/line_oa_chat_261028_111820.jpg`、`参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | PhilosophySection、CareStories、BridalSection |
+| 一人ひとりの体質や悩みに合わせる、カウンセリングを重視する | `参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | PhilosophySection、SalonPromises、PractitionerSection |
+| 完全予約制、女性専用 | `参考/line_oa_chat_261028_111816.jpg` | salon.features、SalonPromises、SalonSection、SEOの説明 |
+| 完全個室 | `参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | salon.features、SalonPromises、SalonSection |
 | 治療家・橋場亜矢さん | `参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg`、`line_oa_chat_261028_111935.jpg` | salon.practitioner、PractitionerSection |
 | ブライダル、肩・背中・顔まわり・立ち姿のケア | `参考/line_oa_chat_261028_111848.jpg`、`参考/line_oa_chat_261028_112024.jpg`、`参考/line_oa_chat_261028_112027.jpg` | BridalSection、SEOの説明 |
-| 内側からの美しさ、心と身体に寄り添う考え方 | `参考/line_oa_chat_261028_111824.jpg`、`参考/line_oa_chat_261028_111900.jpg` | PhilosophySection、CareStories、PractitionerSection |
+| 心と体に寄り添うケア、内側からの美しさ、安心できる癒しの空間 | `参考/line_oa_chat_261028_111824.jpg`、`参考/line_oa_chat_261028_111848.jpg`、`参考/line_oa_chat_261028_111900.jpg` | SalonPromisesの3つの約束として明示 |
+| 美容鍼、素肌や表情の美しさ、年齢を重ねても自分らしく過ごす考え方 | `参考/line_oa_chat_261028_111900.jpg` | PhilosophySection、SalonPromises、CareStoriesの美容鍼紹介 |
+| フェイシャル、機器を用いる顔まわりのケア | `参考/line_oa_chat_261028_111900.jpg`、`参考/line_oa_chat_261028_111820.jpg`、提供の施術写真 | CareStoriesの独立したフェイシャル紹介 |
 | ミセス・インターナショナル2027公式パートナー | 当初のご提供文章・大会用ロゴ | 既存のPartnerSectionを維持 |
 
 資料の「人気No.1」、効果の数値、施術回数・期間、現在の経験年数などは、新たに推測して追加していません。比較写真には元のBefore／After表示を残し、施術の感じ方や変化には個人差がある旨を短く添えています。
@@ -42,14 +46,16 @@
 
 1. ヒーロー
 2. 公式パートナー
-3. 肩甲骨はがし・肩甲骨リリース
-4. ビフォーアフター
-5. オーダーメイドのサロンケア（鍼灸・美容・姿勢）
-6. 施術者紹介・紹介記事・人物写真
-7. 施術室・待合・建物・館内・ケアのひとこま
-8. ブライダルケア
+3. サロン全体の理念と3つの約束
+4. サロンのケア（鍼灸・ボディケア／美容鍼／フェイシャル／整体・姿勢。肩甲骨リリースは整体・姿勢の中で紹介）
+5. ブライダルケア
+6. ビフォーアフター
+7. 施術者紹介・紹介記事・人物写真
+8. 施術室・待合・建物外観・館内
 9. 詳細・予約
 10. アクセス
+
+提供の美容鍼と機器による施術写真は、サロン空間紹介から各ケアの説明へ移動しました。既存の提供画像は維持し、提供画像19点・ロゴ2点の使用数も変わっていません。
 
 既存の透過ロゴ、ヒーロー、公式パートナー文章、予約先、正規URLを維持しています。新たなセクションの表示と写真にも、既存のGSAPの表示・マスク処理を適用する構成です。比較写真はマスクで切り取らず、全体を表示します。
 

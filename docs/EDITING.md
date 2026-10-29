@@ -26,12 +26,13 @@
 | ロゴ、ヘッダー、モバイルメニュー | `src/components/SiteHeader.astro` |
 | ヒーロー画像とコピー | `src/components/HeroSection.astro` |
 | 公式パートナーの紹介と大会用ロゴ | `src/components/PartnerSection.astro` |
-| 肩甲骨はがし・肩甲骨リリース | `src/components/ReleaseSection.astro` |
+| 整体・姿勢ケア（肩甲骨リリースを含む。CareStories内で表示） | `src/components/ReleaseSection.astro` |
 | ビフォーアフターの比較写真 | `src/components/BeforeAfterSection.astro` |
-| 健康・美容・姿勢の紹介 | `src/components/PhilosophySection.astro` |
-| 健康・美容・姿勢に添える6点の写真と文章 | `src/components/CareStories.astro` |
+| サロン全体の理念とケアの紹介 | `src/components/PhilosophySection.astro` |
+| 心と体に寄り添うケア・内側からの美しさ・安心できる空間の3つの約束 | `src/components/SalonPromises.astro` |
+| 鍼灸・美容鍼・フェイシャルの写真と文章、整体・姿勢ケアの読み込み | `src/components/CareStories.astro` |
 | 施術者紹介、人物写真、2021年の紹介記事 | `src/components/PractitionerSection.astro` |
-| 施術室、待合スペース、建物外観、館内、ケアのひとこま | `src/components/SalonSection.astro` |
+| 施術室、待合スペース、建物外観、館内 | `src/components/SalonSection.astro` |
 | ブライダルケア | `src/components/BridalSection.astro` |
 | 詳細・予約セクション | `src/components/BookingSection.astro` |
 | 店舗情報と交通案内 | `src/components/AccessSection.astro` |
@@ -53,7 +54,7 @@ PC用とスマートフォン用は`picture`で切り替えます。Astroの画�
 
 通常ロゴは`src/assets/brand/logo-transparent-v1.png`、大会用ロゴは`src/assets/brand/logo02-transparent-v1.png`を使用。元のJPEGは保管したまま、背景透過版を別ファイルとして作成しています。ロゴを読み込むAstroの`Image`もPNG形式を明示し、アルファ透過を維持します。画像制作の記録とプロンプトは`docs/IMAGE-CREDITS.md`を参照してください。
 
-提供画像は19点（紹介記事の画像を含む）を使用し、提供ロゴ2点と合わせて21点です。既存の11点に、肩甲骨まわりの施術イメージ1点、ビフォーアフター2点、人物写真2点、紹介記事1点、待合・館内写真2点を追加しました。同じ画像をブライダル紹介にも再利用していますが、使用数には重複して数えていません。
+提供画像は19点（紹介記事の画像を含む）を使用し、提供ロゴ2点と合わせて21点です。鍼灸・ボディケア、美容鍼、フェイシャル、整体・姿勢ケアに写真を組み合わせ、比較写真、人物写真、紹介記事、施術室・待合・館内・外観も使用しています。美容鍼と機器による施術写真は、それぞれのケアの説明へ移しています。同じ画像をブライダル紹介にも再利用していますが、使用数には重複して数えていません。
 
 比較写真は全体と元のBefore／After表示を保持し、画像全体を新しいタブで大きく見るリンクを設けています。紹介記事も全体を掲載し、2021年4月号と明記して原寸表示リンクを設けています。追加写真もAstroの`Image`と遅延読み込みを使用します。今回の追加後も、実装後のビルド・型チェック・ブラウザー確認は実行していません。
 

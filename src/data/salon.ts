@@ -38,12 +38,12 @@ export const salon = {
 
 export const navigation = [
   { href: '#partnership', label: '公式パートナー', en: 'Partnership' },
-  { href: '#release', label: '肩甲骨リリース', en: 'Scapula release' },
+  { href: '#philosophy', label: '私たちの想い', en: 'Our philosophy' },
+  { href: '#care', label: 'サロンのケア', en: 'Our approach' },
+  { href: '#bridal', label: 'ブライダルケア', en: 'Bridal care' },
   { href: '#comparison', label: 'ビフォーアフター', en: 'Before & after' },
-  { href: '#philosophy', label: 'サロンのケア', en: 'Our approach' },
   { href: '#staff', label: '施術者紹介', en: 'Practitioner' },
   { href: '#salon', label: '院内・サロン', en: 'Our salon' },
-  { href: '#bridal', label: 'ブライダルケア', en: 'Bridal care' },
   { href: '#access', label: 'アクセス', en: 'Access' },
 ] as const;
 
