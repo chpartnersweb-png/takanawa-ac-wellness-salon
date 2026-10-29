@@ -3,6 +3,7 @@ import { getImage } from 'astro:assets';
 import heroDesktop from '../assets/generated/hero-desktop-v1.png';
 import heroMobile from '../assets/generated/hero-mobile-v1.png';
 import Icon from './Icon.astro';
+import { salon } from '../data/salon';
 const [wide, portrait] = await Promise.all([
   getImage({ src: heroDesktop, width: heroDesktop.width, format: 'webp', quality: 87 }),
   getImage({ src: heroMobile, width: heroMobile.width, format: 'webp', quality: 85 }),
@@ -17,7 +18,7 @@ const [wide, portrait] = await Promise.all([
   <p class="hero__side" lang="en">HEALTH, BEAUTY &amp; POSTURE</p>
   <div class="hero__content">
     <p class="hero__eyebrow" lang="en" data-hero-copy>TAKANAWA · AC WELLNESS SALON</p>
-    <h1 id="hero-title" data-hero-copy>凛と、私らしく。</h1>
+    <h1 id="hero-title" data-hero-copy><span class="sr-only">{salon.name} — </span>凛と、私らしく。</h1>
     <p class="hero__signature" data-hero-copy>高輪鍼灸 <span lang="en">AC Wellness Salon</span></p>
   </div>
   <a class="hero__scroll" href="#partnership"><span lang="en">SCROLL TO DISCOVER</span><span class="hero__scroll-line" aria-hidden="true"></span><Icon name="down" /><span class="sr-only">公式パートナー紹介へ</span></a>

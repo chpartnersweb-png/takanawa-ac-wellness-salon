@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+import bridalBack from '../assets/line_oa_chat_261028_111907.jpg';
+import beautyDetail from '../assets/line_oa_chat_261028_111911.jpg';
+import BookingLink from './BookingLink.astro';
+---
+<section class="bridal-section section-space" id="bridal" aria-labelledby="bridal-title">
+  <div class="section-index" data-reveal><span>07</span><span lang="en">BRIDAL CARE</span></div>
+  <div class="section-container bridal-layout">
+    <figure class="bridal-photo"><div class="image-reveal" data-image-reveal><Image src={bridalBack} alt="髪をまとめた女性のドレスから見える肩と背中のブライダルイメージ" width={850} widths={[425, 640, 850]} sizes="(max-width: 767px) 77vw, 43vw" quality={87} /></div></figure>
+    <div class="bridal-copy" data-reveal><p class="eyebrow">大切な一日に向けた、ブライダルケア。</p><h2 id="bridal-title" class="section-title">その日も、<br />あなたらしい輝きを。</h2><p>ドレスから見える肩や背中、<br />顔まわり、そして立ち姿まで。<br />大切な日を迎えるためのケアを、<br />一人ひとりに合わせて考えます。</p><p>肩甲骨リリースや整体、美容鍼などを組み合わせ、<br class="desktop-break" />心と身体に寄り添うオーダーメイドの施術を。<br />気になることやご希望を、お聞かせください。</p><BookingLink /></div>
+    <figure class="bridal-detail"><div class="image-reveal" data-image-reveal><Image src={beautyDetail} alt="首もとから肩にかけてのラインを表したブライダルケアのイメージ" width={640} widths={[320, 480, 640]} sizes="(max-width: 767px) 65vw, 35vw" quality={86} /></div><figcaption>大切な日までの時間も、自分らしく。</figcaption></figure>
+  </div>
+</section>

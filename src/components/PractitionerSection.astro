@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+import article from '../assets/line_oa_chat_261028_111935.jpg';
+import salonMoment from '../assets/line_oa_chat_261028_111958.jpg';
+import salonGroup from '../assets/line_oa_chat_261028_111956.jpg';
+import { salon } from '../data/salon';
+import Icon from './Icon.astro';
+---
+<section class="practitioner-section section-space" id="staff" aria-labelledby="practitioner-title">
+  <div class="section-index" data-reveal><span>05</span><span lang="en">OUR PRACTITIONER</span></div>
+  <div class="section-container">
+    <div class="practitioner-layout">
+      <div class="practitioner-copy" data-reveal>
+        <p class="eyebrow">施術者紹介</p>
+        <h2 id="practitioner-title" class="section-title">お話を伺うことから、<br />あなたのケアを。</h2>
+        <p class="practitioner-name"><span>{salon.practitioner.role}</span>{salon.practitioner.name}</p>
+        <p>一人ひとりの体質やお悩みに合わせて、<br class="desktop-break" />鍼灸・美容・ボディケアを組み合わせた施術を。<br />カウンセリングを大切に、<br class="desktop-break" />心と身体に寄り添う時間をお届けします。</p>
+        <div class="practitioner-article-note"><p>2021年4月の紹介記事では、鍼灸を学んだ歩みや、カウンセリングを大切にする姿勢が紹介されています。</p><a href={article.src} target="_blank" rel="noopener noreferrer">紹介記事を大きく見る<span>2021年4月号</span><Icon /><span class="sr-only">（新しいタブで開きます）</span></a></div>
+      </div>
+      <figure class="practitioner-article" data-reveal><a href={article.src} target="_blank" rel="noopener noreferrer" aria-label="橋場亜矢さんの紹介記事・2021年4月号を大きく見る（新しいタブ）"><Image src={article} alt="治療家・橋場亜矢さんの経歴と施術への考え方を紹介した2021年4月号の記事" width={850} widths={[425, 640, 850]} sizes="(max-width: 767px) 83vw, 37vw" quality={90} /></a><figcaption>橋場亜矢さんの紹介記事 ／ 2021年4月号</figcaption></figure>
+    </div>
+    <div class="practitioner-moments" aria-label="サロンでのひとこま">
+      <figure><div class="image-reveal" data-image-reveal><Image src={salonMoment} alt="白衣姿の方と笑顔で並ぶ二人のサロンでの記念写真" width={680} widths={[340, 510, 680]} sizes="(max-width: 767px) 65vw, 33vw" quality={87} /></div><figcaption>サロンでのひとこま。</figcaption></figure>
+      <figure><div class="image-reveal" data-image-reveal><Image src={salonGroup} alt="花束を手にした方々と白衣姿の方々が並ぶ記念写真" width={950} widths={[475, 710, 950]} sizes="(max-width: 767px) 88vw, 49vw" quality={87} /></div><figcaption>人と人とのつながりも、大切に。</figcaption></figure>
+    </div>
+  </div>
+</section>

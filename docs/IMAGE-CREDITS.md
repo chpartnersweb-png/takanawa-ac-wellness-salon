@@ -50,6 +50,14 @@ Create a matching portrait 9:16 mobile website hero photograph based on this ref
 | `src/assets/line_oa_chat_261028_111910.jpg` | 姿勢の紹介・肩から背中のケアのイメージ |
 | `src/assets/line_oa_chat_261028_112001.jpg` | ケアのひとこま・顔まわりの施術写真 |
 | `src/assets/line_oa_chat_261028_112009.jpg` | ケアのひとこま・機器を用いた施術写真 |
+| `src/assets/line_oa_chat_261028_111818.jpg` | 肩甲骨はがし・肩甲骨リリースの説明に添える施術イメージ |
+| `src/assets/line_oa_chat_261028_111920.jpg` | 横から撮影したBefore／Afterの比較。全体を保持 |
+| `src/assets/line_oa_chat_261028_111921.jpg` | 背中から撮影したBefore／Afterの比較。全体を保持 |
+| `src/assets/line_oa_chat_261028_111935.jpg` | 橋場亜矢さんの紹介記事。2021年4月号と明記 |
+| `src/assets/line_oa_chat_261028_111958.jpg` | 施術者紹介に添えるサロンでの記念写真。個人名との対応は推測しない |
+| `src/assets/line_oa_chat_261028_111956.jpg` | サロンでの集合写真。全員をスタッフとする紹介は行わない |
+| `src/assets/line_oa_chat_261028_111925.jpg` | 待合スペース |
+| `src/assets/line_oa_chat_261028_111923.jpg` | BRIDARIUM MUE高輪本店の館内。施術室と区別 |
 
 ロゴと提供画像の原本は変更していません。本文やボタンの文字はHTMLで記載し、生成画像内に文字を焼き込んでいません。
 

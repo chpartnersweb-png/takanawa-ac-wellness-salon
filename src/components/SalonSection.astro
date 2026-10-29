@@ -4,17 +4,23 @@ import room from '../assets/line_oa_chat_261028_111814.jpg';
 import building from '../assets/line_oa_chat_261028_112012.jpg';
 import faceCare from '../assets/line_oa_chat_261028_112001.jpg';
 import careMoment from '../assets/line_oa_chat_261028_112009.jpg';
+import waitingRoom from '../assets/line_oa_chat_261028_111925.jpg';
+import buildingInterior from '../assets/line_oa_chat_261028_111923.jpg';
 import { salon } from '../data/salon';
 ---
 <section class="salon-section section-space" id="salon" aria-labelledby="salon-title">
-  <div class="section-index" data-reveal><span>03</span><span lang="en">OUR SALON</span></div>
+  <div class="section-index" data-reveal><span>06</span><span lang="en">OUR SALON</span></div>
   <div class="section-container">
-    <div class="salon-section__heading"><p class="eyebrow" data-reveal>高輪鍼灸 AC Wellness Salon</p><h2 id="salon-title" class="section-title" data-reveal>高輪で、自分に<br class="mobile-break" />向き合うひととき。</h2></div>
+    <div class="salon-section__heading"><p class="eyebrow" data-reveal>高輪鍼灸 AC Wellness Salon</p><h2 id="salon-title" class="section-title" data-reveal>高輪で、自分に<br class="mobile-break" />向き合うひととき。</h2><ul class="salon-features" aria-label="サロンの利用形態" data-reveal>{salon.features.map((feature) => <li>{feature}</li>)}</ul></div>
     <div class="salon-composition">
       <figure class="salon-composition__room"><div class="image-reveal" data-image-reveal><Image src={room} alt="鏡と施術ベッドのある高輪鍼灸の施術室" width={880} widths={[440, 660, 880]} sizes="(max-width: 767px) 79vw, 47vw" quality={87} /></div><figcaption><span>01 / 施術室</span><span lang="en">TREATMENT ROOM</span></figcaption></figure>
-      <div class="salon-composition__note" data-reveal><span class="salon-composition__vertical" aria-hidden="true">心ほどける、ひととき。</span><p>慌ただしい日常から、<br />少しだけ離れて。<br />自分のための時間を、<br />ここ高輪で。</p><div class="salon-composition__facts"><span><b>{salon.seats}</b>席のサロン</span><span>高輪台駅から徒歩<b>3</b>分</span></div></div>
+      <div class="salon-composition__note" data-reveal><span class="salon-composition__vertical" aria-hidden="true">心ほどける、ひととき。</span><p>完全予約制の、<br />女性専用サロン。<br />個室の空間で、<br />自分のための時間を。</p><div class="salon-composition__facts"><span><b>{salon.seats}</b>席のサロン</span><span>高輪台駅から徒歩<b>3</b>分</span></div></div>
       <figure class="salon-composition__building"><div class="image-reveal" data-image-reveal><Image src={building} alt="BRIDARIUM MUE高輪本店の建物外観" width={1000} widths={[500, 750, 1000]} sizes="(max-width: 767px) 87vw, 48vw" quality={88} /></div><figcaption><span>02 / 建物外観</span><span lang="en">BRIDARIUM MUE</span></figcaption></figure>
       <p class="salon-composition__address" data-reveal>{salon.building}<br /><span>（{salon.buildingKana}）</span><br />{salon.floor}でお待ちしています。</p>
+    </div>
+    <div class="salon-interiors">
+      <figure class="salon-interiors__waiting"><div class="image-reveal" data-image-reveal><Image src={waitingRoom} alt="ソファとテーブルを配した待合スペース" width={800} widths={[400, 600, 800]} sizes="(max-width: 767px) 78vw, 40vw" quality={88} /></div><figcaption><span>03 / 待合スペース</span><span lang="en">WAITING SPACE</span></figcaption></figure>
+      <figure class="salon-interiors__building"><div class="image-reveal" data-image-reveal><Image src={buildingInterior} alt="ウェディングドレスが並ぶBRIDARIUM MUE高輪本店の館内" width={1000} widths={[500, 750, 1000]} sizes="(max-width: 767px) 88vw, 48vw" quality={88} /></div><figcaption><span>04 / BRIDARIUM MUE高輪本店 館内</span><span lang="en">BUILDING INTERIOR</span></figcaption><p>サロンはBRIDARIUM MUE高輪本店の地下1階にあります。</p></figure>
     </div>
     <div class="salon-moments">
       <div class="salon-moments__intro" data-reveal><p class="eyebrow" lang="en">CARE MOMENTS</p><h3>ケアのひとこま。</h3><p>その日の自分に、向き合う時間。</p></div>

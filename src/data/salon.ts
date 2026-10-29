@@ -6,6 +6,12 @@ export const salon = {
   phoneHref: 'tel:08039108764',
   postalCode: '108-0074',
   address: '東京都港区高輪3-7-6',
+  postalAddress: {
+    addressRegion: '東京都',
+    addressLocality: '港区',
+    streetAddress: '高輪3-7-6',
+    addressCountry: 'JP',
+  },
   building: 'BRIDARIUM MUE高輪本店',
   buildingKana: 'ブライダリウム・ミュー',
   floor: '地下1階',
@@ -16,6 +22,11 @@ export const salon = {
   hoursNote: '平日・土日祝共通',
   closed: '水曜日',
   seats: 2,
+  features: ['完全予約制', '女性専用', '完全個室'],
+  practitioner: {
+    name: '橋場 亜矢',
+    role: '治療家',
+  },
   links: {
     booking: 'https://beauty.hotpepper.jp/kr/slnH000823136/',
     line: 'https://lin.ee/x8CLAPL',
@@ -27,8 +38,12 @@ export const salon = {
 
 export const navigation = [
   { href: '#partnership', label: '公式パートナー', en: 'Partnership' },
-  { href: '#philosophy', label: '私たちの想い', en: 'Our philosophy' },
-  { href: '#salon', label: 'サロンについて', en: 'Our salon' },
+  { href: '#release', label: '肩甲骨リリース', en: 'Scapula release' },
+  { href: '#comparison', label: 'ビフォーアフター', en: 'Before & after' },
+  { href: '#philosophy', label: 'サロンのケア', en: 'Our approach' },
+  { href: '#staff', label: '施術者紹介', en: 'Practitioner' },
+  { href: '#salon', label: '院内・サロン', en: 'Our salon' },
+  { href: '#bridal', label: 'ブライダルケア', en: 'Bridal care' },
   { href: '#access', label: 'アクセス', en: 'Access' },
 ] as const;
 

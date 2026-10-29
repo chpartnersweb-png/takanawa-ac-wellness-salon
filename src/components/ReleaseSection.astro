@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import releasePhoto from '../assets/line_oa_chat_261028_111818.jpg';
+import { salon } from '../data/salon';
+import BookingLink from './BookingLink.astro';
+---
+<section class="release-section section-space" id="release" aria-labelledby="release-title">
+  <div class="section-index" data-reveal><span>02</span><span lang="en">SCAPULA RELEASE</span></div>
+  <div class="section-container">
+    <div class="release-heading" data-reveal>
+      <p class="eyebrow">肩甲骨はがし・肩甲骨リリース</p>
+      <h2 id="release-title" class="section-title">肩甲骨から、<br />しなやかな私へ。</h2>
+    </div>
+    <figure class="release-photo"><div class="image-reveal" data-image-reveal><Image src={releasePhoto} alt="肩甲骨のまわりに手を添えてケアする施術イメージ" width={1000} widths={[480, 768, 1000]} sizes="(max-width: 767px) 89vw, 80vw" quality={88} /></div><figcaption>肩・背中まわりに、丁寧に向き合うケア。</figcaption></figure>
+    <div class="release-description">
+      <p class="release-description__lead" data-reveal>肩や首のこわばりも、<br />気になる立ち姿も。<br />肩甲骨まわりから見つめます。</p>
+      <div class="release-description__body" data-reveal>
+        <p>肩甲骨はがし・肩甲骨リリースは、肩甲骨まわりに着目し、肩や背中のこわばり、巻き肩・猫背などの姿勢のお悩みに向き合うケアです。</p>
+        <p>高輪鍼灸 AC Wellness Salonでは、整体・鍼灸・美容・機器を用いたケアを組み合わせ、一人ひとりの体質やお悩みに合わせたオーダーメイドの施術をご提案します。</p>
+        <p>カウンセリングでお話を伺い、身体のことも、美容のことも、一緒に考える時間を大切にしています。</p>
+      </div>
+    </div>
+    <div class="release-footer" data-reveal><ul class="salon-features" aria-label="サロンの特徴">{salon.features.map((feature) => <li>{feature}</li>)}</ul><BookingLink /></div>
+  </div>
+</section>

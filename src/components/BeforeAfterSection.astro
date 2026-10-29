@@ -1,0 +1,24 @@
+---
+import { Image } from 'astro:assets';
+import sideComparison from '../assets/line_oa_chat_261028_111920.jpg';
+import backComparison from '../assets/line_oa_chat_261028_111921.jpg';
+import Icon from './Icon.astro';
+const comparisons = [
+  { image: sideComparison, title: '横から見た肩まわり', alt: '横から撮影した肩まわりのBefore・After比較写真。左がBefore、右がAfter', number: '01' },
+  { image: backComparison, title: '背中から見た肩まわり', alt: '背中側から撮影した肩まわりのBefore・After比較写真。左がBefore、右がAfter', number: '02' },
+];
+---
+<section class="comparison-section section-space" id="comparison" aria-labelledby="comparison-title">
+  <div class="section-index" data-reveal><span>03</span><span lang="en">BEFORE &amp; AFTER</span></div>
+  <div class="section-container">
+    <div class="comparison-heading" data-reveal><h2 id="comparison-title" class="section-title">肩・背中の<br class="mobile-break" />ビフォーアフター。</h2><p>横から、そして背中から。<br />肩まわりの比較写真をご紹介します。</p></div>
+    <div class="comparison-photos">
+      {comparisons.map(({ image, title, alt, number }) => <figure class="comparison-photo" data-reveal>
+        <div class="comparison-photo__heading"><span>{number}</span><h3>{title}</h3></div>
+        <a href={image.src} class="comparison-photo__open" target="_blank" rel="noopener noreferrer" aria-label={`${title}の比較写真を大きく見る（新しいタブ）`}><Image src={image} alt={alt} width={image.width} widths={[480, 768, image.width]} sizes="(max-width: 767px) 88vw, 46vw" quality={92} /><span>写真を大きく見る<Icon /></span></a>
+        <figcaption>左：Before ／ 右：After</figcaption>
+      </figure>)}
+    </div>
+    <p class="comparison-note">写真は一例です。施術の感じ方や変化には個人差があります。</p>
+  </div>
+</section>

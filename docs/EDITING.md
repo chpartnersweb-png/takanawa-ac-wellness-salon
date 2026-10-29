@@ -19,19 +19,27 @@
 | 内容 | ファイル |
 | --- | --- |
 | セクションの順序 | `src/pages/index.astro` |
-| ページタイトル、説明、OGP、構造化データ | `src/layouts/BaseLayout.astro` |
+| ページタイトル、説明、構造化データの内容 | `src/data/seo.ts` |
+| SEOメタタグとOGP画像の出力 | `src/components/Seo.astro` |
+| 本番URL | `src/data/site.mjs` |
+| 共通HTML、書体の読み込み | `src/layouts/BaseLayout.astro` |
 | ロゴ、ヘッダー、モバイルメニュー | `src/components/SiteHeader.astro` |
 | ヒーロー画像とコピー | `src/components/HeroSection.astro` |
 | 公式パートナーの紹介と大会用ロゴ | `src/components/PartnerSection.astro` |
+| 肩甲骨はがし・肩甲骨リリース | `src/components/ReleaseSection.astro` |
+| ビフォーアフターの比較写真 | `src/components/BeforeAfterSection.astro` |
 | 健康・美容・姿勢の紹介 | `src/components/PhilosophySection.astro` |
 | 健康・美容・姿勢に添える6点の写真と文章 | `src/components/CareStories.astro` |
-| 施術室と建物外観 | `src/components/SalonSection.astro` |
+| 施術者紹介、人物写真、2021年の紹介記事 | `src/components/PractitionerSection.astro` |
+| 施術室、待合スペース、建物外観、館内、ケアのひとこま | `src/components/SalonSection.astro` |
+| ブライダルケア | `src/components/BridalSection.astro` |
 | 詳細・予約セクション | `src/components/BookingSection.astro` |
 | 店舗情報と交通案内 | `src/components/AccessSection.astro` |
 | フッター、SNS | `src/components/SiteFooter.astro` |
 | スマートフォン下部の固定リンク | `src/components/MobileActions.astro` |
 | 共通の予約ボタン | `src/components/BookingLink.astro` |
 | 色、書体、余白、画面幅別のスタイル | `src/styles/global.css` |
+| 参考資料に基づく追加セクションのスタイル | `src/styles/content.css` |
 | GSAP、ScrollTrigger、Lenis、メニュー操作 | `src/scripts/site.ts` |
 
 ## 画像
@@ -45,7 +53,11 @@ PC用とスマートフォン用は`picture`で切り替えます。Astroの画�
 
 通常ロゴは`src/assets/brand/logo-transparent-v1.png`、大会用ロゴは`src/assets/brand/logo02-transparent-v1.png`を使用。元のJPEGは保管したまま、背景透過版を別ファイルとして作成しています。ロゴを読み込むAstroの`Image`もPNG形式を明示し、アルファ透過を維持します。画像制作の記録とプロンプトは`docs/IMAGE-CREDITS.md`を参照してください。
 
-提供写真は11点を使用しています。従来の施術イメージ・施術室・建物外観に加え、`CareStories.astro`に6点、`SalonSection.astro`の「ケアのひとこま」に2点を追加しました。提供ロゴ2点を含めた使用素材は13点です。追加写真もAstroの`Image`と遅延読み込みを使用します。今回の追加後も、実装後のビルド・型チェック・ブラウザー確認は実行していません。
+提供画像は19点（紹介記事の画像を含む）を使用し、提供ロゴ2点と合わせて21点です。既存の11点に、肩甲骨まわりの施術イメージ1点、ビフォーアフター2点、人物写真2点、紹介記事1点、待合・館内写真2点を追加しました。同じ画像をブライダル紹介にも再利用していますが、使用数には重複して数えていません。
+
+比較写真は全体と元のBefore／After表示を保持し、画像全体を新しいタブで大きく見るリンクを設けています。紹介記事も全体を掲載し、2021年4月号と明記して原寸表示リンクを設けています。追加写真もAstroの`Image`と遅延読み込みを使用します。今回の追加後も、実装後のビルド・型チェック・ブラウザー確認は実行していません。
+
+参考資料と文章・画像の対応は`docs/CONTENT-SOURCES.md`にまとめています。`salon.features`と`salon.practitioner`は`src/data/salon.ts`から変更できます。
 
 ## 動き
 
@@ -57,15 +69,15 @@ PC用とスマートフォン用は`picture`で切り替えます。Astroの画�
 
 ## 公開URL
 
-本番URLは未指定です。公開URLが決まったら、`astro.config.mjs`の`defineConfig`に`site`を設定してください。
+本番URLは`https://takanawa-ac-wellness-salon.pages.dev/`に設定済みです。`src/data/site.mjs`の`SITE_URL`を、Astro設定・canonical・OGP・構造化データ・robots.txt・サイトマップで共有しています。ドメインを変更する場合は、この値を変更します。
 
 ```js
-export default defineConfig({
-  site: '確定した本番URL',
-});
+export const SITE_URL = 'https://takanawa-ac-wellness-salon.pages.dev/';
 ```
 
-`site`が設定されたときにcanonical、`og:url`、OGP画像の絶対URLを出力する構成です。仮のドメインは出力していません。サイトマップ等の公開後SEO作業は今回の実装には含めていません。
+`src/components/Seo.astro`でcanonical、OGP、X/Twitterメタタグと構造化データを出力します。OGPは提供の施術室写真から1200×630のJPEGを生成する構成です。`src/pages/robots.txt.ts`と`src/pages/sitemap.xml.ts`はビルド時に静的ファイルを生成します。
+
+詳細は`docs/SEO.md`を参照してください。ソース変更を公開サイトへ反映するにはCloudflare Pagesで再ビルド・再デプロイが必要です。SEO変更後も、ご指定によりビルド・型チェック・構造化データの検証・ブラウザー確認は実行していません。Search Console登録やサイトマップ送信も行っていません。
 
 ## ご自身で確認するとき
 
