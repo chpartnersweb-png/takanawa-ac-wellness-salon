@@ -3,7 +3,7 @@ import { salon } from './salon';
 
 export const seo = {
   title: `${salon.name}｜高輪台の鍼灸・美容サロン`,
-  description: `高輪台駅徒歩3分の女性専用・完全予約制サロン「${salon.name}」。鍼灸・美容鍼・フェイシャル・ボディケア・姿勢のケアを、一人ひとりに合わせてご提案。ブライダルや、年齢を重ねても自分らしく過ごすための美容と健康をサポートします。ミセス・インターナショナル2027公式パートナー。${salon.hours}、${salon.closed}定休。`,
+  description: `高輪台駅徒歩3分、男女ともにご利用いただける完全予約制サロン「${salon.name}」。鍼灸・美容鍼・フェイシャル・ボディケア・姿勢のケアを、一人ひとりに合わせてご提案。ブライダルや、年齢を重ねても自分らしく過ごすための美容と健康をサポートします。ミセス・インターナショナル2027公式パートナー。${salon.hours}、${salon.closed}定休。`,
   imageAlt: `${salon.name}の施術室`,
   language: 'ja-JP',
   locale: 'ja_JP',

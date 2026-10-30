@@ -22,7 +22,7 @@ export const salon = {
   hoursNote: '平日・土日祝共通',
   closed: '水曜日',
   seats: 2,
-  features: ['完全予約制', '女性専用', '完全個室'],
+  features: ['完全予約制', '男女ともに利用可', '完全個室'],
   practitioner: {
     name: '橋場 亜矢',
     role: '治療家',
