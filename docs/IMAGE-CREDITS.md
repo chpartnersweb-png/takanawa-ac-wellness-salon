@@ -2,6 +2,22 @@
 
 作成日：2026年10月29日
 
+## 施術室写真の差し替え・明るさ調整（2026年11月2日）
+
+- 入力・編集対象：`src/assets/line_oa_chat_261102_124029.jpg`
+- 色味・明るさの参照のみ：`src/assets/line_oa_chat_261028_111925.jpg`（既存の待合写真）
+- 保存先：`src/assets/edited/treatment-room-bright-v1.png`
+- ツール：組み込みimage_gen（画像編集）
+- 生成元：`C:\Users\callt\.codex\generated_images\01a186fa-d29a-7222-b5e6-647f72ccd76e\exec-fc8b7ecf-32b1-46c8-9d92-1261072a3cfc.png`
+- 用途：サロン紹介の施術室、OGP・Xの共有画像と構造化データの代表画像。
+- 調整方針：露出と暗部を少し明るくし、黄色みを抑えた温かい白へ。壁やベッドの質感を保ち、設備・構図の維持を指示。入力原本と旧施術室写真は保管。
+
+使用したプロンプト：
+
+```text
+Use case: lighting-weather. Asset type: real treatment-room photograph for 高輪鍼灸 AC Wellness Salon website. Input image 1 (line_oa_chat_261102_124029.jpg) is the ONLY edit target. Input image 2 (line_oa_chat_261028_111925.jpg) is a color and brightness reference ONLY; do not transfer its objects or composition. Primary request: subtly brighten the existing treatment-room photo to match the soft, clean, warm ivory whites and restrained natural contrast of the waiting-room reference and salon website. Raise exposure moderately (approximately half a stop), lift dark furniture and corner shadows a little, reduce the strong yellow/orange cast slightly while preserving the genuine warm wall lights, make the wall a natural warm off-white and keep the patterned bedding grey-blue. Retain clear textures, natural shadow depth and lamp highlights; no clipped white walls or washed-out bedding. CRITICAL: this is color/exposure correction of a real location, not interior redesign. Preserve exactly the complete original field of view, camera angle, aspect ratio, all bed and towel shapes/patterns, mirrors and reflections, furniture, lamps, medical equipment, arms, cables, casters, tiny equipment labels, curtain, floor grain and their positions. Do not add, remove, replace or rearrange anything. No crop, no invented window/sunlight, no smoothing or stylization, no added text or watermark. Output a single naturally retouched photograph of image 1.
+```
+
 ## 生成したヒーロー画像
 
 OpenAIの組み込みimage_genツールを使用しました。ブランドの雰囲気を表すための生成画像で、実店舗の写真、実際のスタッフ、大会出場者を示すものではありません。ページではヒーローに使用し、空間紹介は提供素材を使用しています。
@@ -40,7 +56,7 @@ Create a matching portrait 9:16 mobile website hero photograph based on this ref
 | `src/assets/logo.jpg` | 通常ロゴの原本。背景透過版を作成し、ヘッダーとフッターに使用 |
 | `src/assets/logo02.jpg` | 大会用ロゴの原本。背景透過版を作成し、公式パートナー紹介に使用 |
 | `src/assets/line_oa_chat_261028_111912.jpg` | サロンの考え方に添える施術イメージ |
-| `src/assets/line_oa_chat_261028_111814.jpg` | 施術室の紹介 |
+| `src/assets/line_oa_chat_261102_124029.jpg` | 施術室の紹介・共有用代表画像。明るさと色味を調整した別ファイルを使用（2026年11月2日差し替え）。旧111814は原本として保管 |
 | `src/assets/line_oa_chat_261028_112012.jpg` | 建物外観の紹介 |
 | `src/assets/line_oa_chat_261028_111903.jpg` | 健康の紹介・背中への鍼のイメージ |
 | `src/assets/line_oa_chat_261028_111908.jpg` | 健康の紹介・首と肩のケアのイメージ |

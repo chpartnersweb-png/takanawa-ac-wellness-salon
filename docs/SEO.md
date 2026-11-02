@@ -31,7 +31,7 @@ H1には見える短いコピーを維持し、同じ見出し内にアクセシ
 - X/Twitter：summary_large_image、タイトル、説明文、画像、画像の代替テキスト。
 - サイトマップへのlink。
 
-OGP画像は、提供の施術室写真`src/assets/line_oa_chat_261028_111814.jpg`を入力に、Astroで1200×630のJPEGへ変換する構成です。店舗紹介としての代表画像にも同じ写真を使用します。
+OGP画像は、2026年11月2日にご指定の施術室写真`src/assets/line_oa_chat_261102_124029.jpg`の明るさ・色味を調整した`src/assets/edited/treatment-room-bright-v1.png`を入力に、Astroで1200×630のJPEGへ変換する構成です。店舗紹介としての代表画像にも同じ写真を使用します。
 
 ## 構造化データ
 
